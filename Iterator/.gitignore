@@ -1,0 +1,12 @@
+delta.sql
+.vs
+*.dbmdl
+src/Composite/packages/
+/*/packages/*
+/packages/
+!packages/repositories.config
+/bin/*
+/obj/*
+src/Composite/*/bin/*
+src/Composite/*/obj/*
+src/Composite/Decorator.sln.DotSettings.user
