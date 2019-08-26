@@ -1,18 +1,21 @@
-# Welcome to Starbuzz Coffee
+# Breaking News: Objectville Diner, Pancake House and Cafe Merge
 
-Starbuzz Coffee has made a name for ourselves as the fastest growing coffee shop around.  If you’ve seen one on your local corner, look across the street; you’ll see another one. Because we're growing so quickly, we’re scrambling to update our ordering systems to match our beverage offerings. 
+Great news again! After those delicious pancake breakfasts at the Pancake House and those yummy lunches at the Diner all in one place now we have another problem...
 
-In addition to your coffee, you can also ask for several condiments like steamed milk, soy, and mocha (otherwise known as chocolate), and have it all topped off with whipped milk.  Starbuzz charges 0.25 currency units for each of these, but we really need to get them built into our order system.
+They want to add a Cafe menu and they also want to add a separate Dessert menu to the Diner.
 
-We had a crack at it, but as you can see from the Condiments test - we quickly realised it was going to get complicated very quickly.
+We want to implement a client that uses all those menus and menus inside menus.
+
+Imagine you have been hired by the new company formed by the merger of the Diner, the Pancake House and the Cafe to create a C#-enabled waitress.
+
+The spec for the C#-enabled waitress specifies that she can print a custom menu for customers on demand, and even tell you if a menu item is vegetarian without having to ask the cook — now that’s an innovation!
 
 # Requirements
 
-When the user selects a Coffee blend 
-And the user adds one or more condiments
-Then the order total should be added up correctly on the order
+C#-enabled Waitress: code-name "Alice"
 
-# Constraints
-You may not alter any of the files in the Beverages namespace, and the Store class must always take a list of Beverage for the coffee menu.
+PrintAll() - prints every item on the menu
 
-You can make any changes you need to the files in the Condiments namespace or the other classes, and add new classes to these.
+PrintVegetarianMenu() - prints all vegetarian menu items
+
+IsItemVegetarian(name) - given the name of an item, returns true if the item is vegetarian, otherwise returns false
