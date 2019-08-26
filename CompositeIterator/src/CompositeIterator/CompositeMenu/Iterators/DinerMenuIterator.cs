@@ -6,7 +6,7 @@ namespace CompositeMenu.Iterators
 {
     public class DinerMenuIterator : IEnumerator<MenuItem>
     {
-        private int index = 0;
+        private int currentIndex = -1;
 
         private MenuItem[] DinerMenu { get; }
 
@@ -17,9 +17,9 @@ namespace CompositeMenu.Iterators
         
         public bool MoveNext()
         {
-            if (DinerMenu.Length > index && DinerMenu[index] != null)
+            currentIndex++;
+            if (DinerMenu.Length > currentIndex && DinerMenu[currentIndex] != null)
             {
-                index++;
                 return true;
             }
 
@@ -31,13 +31,13 @@ namespace CompositeMenu.Iterators
             throw new System.NotImplementedException();
         }
 
-        public MenuItem Current => DinerMenu[index];
+        public MenuItem Current => DinerMenu[currentIndex];
 
         object IEnumerator.Current => Current;
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

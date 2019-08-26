@@ -1,48 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using CompositeMenu.Iterators;
 
 namespace CompositeMenu.Aggregates
 {
-    public class PancakeHouseMenu : IEnumerable<MenuItem>
+    public class PancakeHouseMenu : IEnumerable<MenuItem>, IMenu
     {
         private readonly ArrayList _menuItems;
 
-        public PancakeHouseMenu()
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public PancakeHouseMenu(string name, string description)
         {
+            Name = name;
+            Description = description;
             _menuItems = new ArrayList();
-            LoadMenu();
         }
 
-        private void LoadMenu()
+        public void AddMenuItem(string name, string description, double price, bool isVegetarian)
         {
-            AddMenuItem(
-                id: "1",
-                name: "Regular Pancake Breakfast",
-                description: "Pancakes with fried eggs and sausage",
-                price: 5.5,
-                isVegetarian: false);
-            AddMenuItem(
-                id: "2",
-                name: "Blueberry Pancakes",
-                description: "Pancakes made with fresh blueberries and blueberry syrup",
-                price: 6.5,
-                isVegetarian: true);
-            AddMenuItem(
-                id: "3",
-                name: "Waffles",
-                description: "Waffles with choice of blueberries or strawberries",
-                price: 5.0,
-                isVegetarian: true);
-        }
-
-        public void AddMenuItem(string id, string name, string description, double price, bool isVegetarian)
-        {
-            _menuItems.Add(new MenuItem(id, name, description, price, isVegetarian));
+            _menuItems.Add(new MenuItem(name, description, price, isVegetarian));
         }
         
         public IEnumerator<MenuItem> GetEnumerator()
         {
-            return new PancakeHouseIterator(_menuItems);
+            return new PancakeHouseMenuIterator(_menuItems);
         }
 
         IEnumerator IEnumerable.GetEnumerator()

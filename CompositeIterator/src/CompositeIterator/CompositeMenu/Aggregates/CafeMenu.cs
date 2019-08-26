@@ -3,41 +3,24 @@ using System.Collections.Generic;
 
 namespace CompositeMenu.Aggregates
 {
-    public class CafeMenu : IEnumerable<MenuItem>
+    public class CafeMenu : IEnumerable<MenuItem>, IMenu
     {
         private readonly List<MenuItem> _menuItems;
 
-        public CafeMenu()
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        public CafeMenu(string name, string description)
         {
+            Name = name;
+            Description = description;
             _menuItems = new List<MenuItem>();
-            LoadMenu();
         }
 
-        private void LoadMenu()
+        public void AddMenuItem(string name, string description, double price, bool isVegetarian)
         {
-            AddMenuItem(
-                id: "1",
-                name: "Regular Pancake Breakfast",
-                description: "Pancakes with fried eggs and sausage",
-                price: 5.5,
-                isVegetarian: false);
-            AddMenuItem(
-                id: "2",
-                name: "Blueberry Pancakes",
-                description: "Pancakes made with fresh blueberries and blueberry syrup",
-                price: 6.5,
-                isVegetarian: true);
-            AddMenuItem(
-                id: "3",
-                name: "Waffles",
-                description: "Waffles with choice of blueberries or strawberries",
-                price: 5.0,
-                isVegetarian: true);
-        }
-
-        public void AddMenuItem(string id, string name, string description, double price, bool isVegetarian)
-        {
-            _menuItems.Add(new MenuItem(id, name, description, price, isVegetarian));
+            _menuItems.Add(new MenuItem(name, description, price, isVegetarian));
         }
 
         public IEnumerator<MenuItem> GetEnumerator()

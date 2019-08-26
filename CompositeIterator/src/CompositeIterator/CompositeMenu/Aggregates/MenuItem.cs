@@ -2,17 +2,14 @@
 {
     public class MenuItem
     {
-        public MenuItem(string id, string name, string description, double price, bool isVegetarian)
+        public MenuItem(string name, string description, double price, bool isVegetarian)
         {
-            Id = id;
             Name = name;
             Description = description;
             Price = price;
             IsVegetarian = isVegetarian;
         }
-
-        public string Id { get; set; }
-
+        
         public string Name { get; set; }
 
         public string Description { get; set; }

@@ -7,26 +7,22 @@ namespace CompositeMenu.Iterators
     public class PancakeHouseMenuIterator : IEnumerator<MenuItem>
     {
         private readonly ArrayList _menuItems;
-        private int count = 0;
+        private int currentIndex = -1;
 
         public PancakeHouseMenuIterator(ArrayList menuItems)
         {
-            throw new System.NotImplementedException();
+            _menuItems = menuItems;
         }
-
-        public bool HasNext()
-        {
-            return count < _menuItems.Count && _menuItems[count] != null;
-        }
-
-        public MenuItem Next()
-        {
-            throw new System.NotImplementedException();
-        }
-
+        
         public bool MoveNext()
         {
-            throw new System.NotImplementedException();
+            currentIndex++;
+            if (currentIndex < _menuItems.Count && _menuItems[currentIndex] != null)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public void Reset()
@@ -34,13 +30,13 @@ namespace CompositeMenu.Iterators
             throw new System.NotImplementedException();
         }
 
-        public MenuItem Current { get; }
+        public MenuItem Current => (MenuItem)_menuItems[currentIndex];
 
         object IEnumerator.Current => Current;
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

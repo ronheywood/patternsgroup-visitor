@@ -15,36 +15,30 @@ namespace CompositeMenu.Client
             _menus = menus;
         }
 
-        public void PrintMenu()
+        public void PrintMenu(IEnumerable<MenuItem> printableMenu)
+        {
+            var menu = (IMenu)printableMenu;
+
+            _compositeMenuConsole.WriteLine($"----------------{menu.Name} Menu-----------------");
+            _compositeMenuConsole.WriteLine($"- {menu.Description}");
+
+            var menuIterator = printableMenu.GetEnumerator();
+            while (menuIterator.MoveNext())
+            {
+                var menuItem = menuIterator.Current;
+                _compositeMenuConsole.WriteLine($"{menuItem.Name} -- {menuItem.Price}");
+            }
+        }
+
+        public void PrintAll()
         {
             _compositeMenuConsole.WriteLine("**************************Menu***************************");
             _compositeMenuConsole.WriteLine("");
-            _compositeMenuConsole.WriteLine("----------------Breakfast Menu-----------------");
 
-            var breakfastMenuIterator = _breakfastMenu.GetIterator();
-            if (breakfastMenuIterator.HasNext())
+            var _menusIterator = _menus.GetEnumerator();
+            while (_menusIterator.MoveNext())
             {
-
-            }
-
-            for (var i = 0; i < breakfastMenuItems.Count; i++)
-            {
-                var breakfastItem = (MenuItem)breakfastMenuItems[i];
-                _compositeMenuConsole.WriteLine($"{breakfastItem.Name} -- {breakfastItem.Price}");
-            }
-
-            _compositeMenuConsole.WriteLine("");
-            _compositeMenuConsole.WriteLine("---------------Diner Menu------------------");
-
-            var lunchMenuItems = _lunchMenu.GetMenuItems();
-            for (var i = 0; i < lunchMenuItems.Length; i++)
-            {
-                var lunchItem = lunchMenuItems[i];
-
-                if (lunchItem != null)
-                {
-                    _compositeMenuConsole.WriteLine($"{lunchItem.Name} -- {lunchItem.Price}");
-                }
+                PrintMenu(_menusIterator.Current);
             }
         }
     }
