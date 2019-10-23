@@ -30,5 +30,7 @@
         {
             _console.WriteLine("Place pizza in a box.");
         }
+
+        public abstract string GetName();
     }
 }

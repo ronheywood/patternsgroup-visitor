@@ -5,7 +5,11 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="PizzaStore" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="IConsole.cs" t="Include" />
+        <e p="CheesePizza.cs" t="Include" />
+        <e p="Logging" t="Include">
+          <e p="IConsole.cs" t="Include" />
+          <e p="PizzaLogger.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
