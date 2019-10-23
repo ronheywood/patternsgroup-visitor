@@ -16,7 +16,7 @@ namespace PizzaStoreTests
         public void It_should_order_pizza()
         {
             var console = A.Fake<IConsole>();
-            var pizzaStore = new PizzaStore(console);
+            var pizzaStore = new PizzaStore.PizzaStore(console);
             Assert.That(pizzaStore.OrderPizza(),Is.InstanceOf<Pizza>());
         }
 
@@ -24,9 +24,9 @@ namespace PizzaStoreTests
         public void Should_prepare_pizza_before_returning_iz()
         {
             var console = A.Fake<IConsole>();
-            var pizzaStore = new PizzaStore(console);
+            var pizzaStore = new PizzaStore.PizzaStore(console);
             pizzaStore.OrderPizza();
-            A.CallTo(() => console.WriteLine("Preparing pizza")).MustHaveHappened();
+            A.CallTo(() => console.WriteLine("Preparing pizza.")).MustHaveHappened();
         }
 
         [Test]

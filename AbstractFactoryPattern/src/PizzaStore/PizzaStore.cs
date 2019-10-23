@@ -11,12 +11,22 @@
 
         public Pizza OrderPizza()
         {
-            var pizza = new Pizza();
-            _console.WriteLine("Preparing pizza");
-            _console.WriteLine("Baking pizza at 220 degrees celsius for 14 minutes.");
-            _console.WriteLine("Cutting the pizza into diagonal slices.");
-            _console.WriteLine("Place pizza in a box.");
+            var pizza = new CheesePizza(_console);
+            pizza.Prepare();
+            pizza.Bake();
+            pizza.Cut();
+            pizza.Box();
+            
             return pizza;
+        }
+    }
+
+    public class CheesePizza : Pizza
+    {
+        public CheesePizza(IConsole console) : base(console){}
+        public override void AddToppings()
+        {
+            _console.WriteLine("Adding tomato sauce, and cheese.");
         }
     }
 }
