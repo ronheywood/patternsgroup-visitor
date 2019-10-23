@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaStore", "PizzaStore\PizzaStore.csproj", "{3507CC6A-8787-4E11-A08B-A5E30FD3617B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaStoreTests", "PizzaStoreTests\PizzaStoreTests.csproj", "{C2B33726-88D5-4A1A-AD1A-C0733E86C98A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3507CC6A-8787-4E11-A08B-A5E30FD3617B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3507CC6A-8787-4E11-A08B-A5E30FD3617B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3507CC6A-8787-4E11-A08B-A5E30FD3617B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3507CC6A-8787-4E11-A08B-A5E30FD3617B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B33726-88D5-4A1A-AD1A-C0733E86C98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B33726-88D5-4A1A-AD1A-C0733E86C98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B33726-88D5-4A1A-AD1A-C0733E86C98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B33726-88D5-4A1A-AD1A-C0733E86C98A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,12 +1,12 @@
 delta.sql
 .vs
 *.dbmdl
-src/TemplateMethod/packages/
+src/PizzaStore/packages/
 /*/packages/*
 /packages/
 !packages/repositories.config
 /bin/*
 /obj/*
-src/TemplateMethod/*/bin/*
-src/TemplateMethod/*/obj/*
-src/TemplateMethod/StarbuzzBaristaManual.sln.DotSettings.user
+src/*/bin/*
+src/*/obj/*
+src/PizzaStore/PizzaStore.sln.DotSettings.user
