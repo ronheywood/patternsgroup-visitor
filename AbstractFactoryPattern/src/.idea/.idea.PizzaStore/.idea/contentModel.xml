@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Kata\PatternsGroup\patterns-study-group\AbstractFactoryPattern\src" t="IncludeFlat">
@@ -8,7 +8,7 @@
         <e p="IConsole.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.0" t="Include">
+            <e p="netcoreapp2.2" t="Include">
               <e p="PizzaStore.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -23,7 +23,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.0" t="Include">
+            <e p="netcoreapp2.2" t="Include">
               <e p="PizzaStoreTests.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
