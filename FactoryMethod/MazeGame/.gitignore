@@ -1,6 +1,0 @@
-delta.sql
-.vs
-*.dbmdl
-/MazeGame/bin/*
-/MazeGame/obj/*
-

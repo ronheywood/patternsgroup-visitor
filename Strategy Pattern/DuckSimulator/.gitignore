@@ -1,7 +1,0 @@
-delta.sql
-.vs
-*.dbmdl
-DuckSimulator.sln.DotSettings.user
-/*/bin/*
-/*/obj/*
-

@@ -1,0 +1,13 @@
+delta.sql
+.vs
+*.dbmdl
+**/*/.idea
+**/*/packages/
+/*/packages/*
+/packages/
+!packages/repositories.config
+/bin/*
+/obj/*
+/**/*/bin/*
+/**/*/obj/*
+/**/*.sln.DotSettings.user

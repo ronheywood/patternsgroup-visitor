@@ -1,20 +1,15 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Visitor Pattern
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This is a sample application with tests
+used while discussing the Visitor Pattern during a Gang Of Four pattens group session.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+The Airport will direct passengers into different locations depending on their ticket type
+Economy, Premium Economy, Business or First Class
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+From arrival at the airport in the passenger goes to a check in desk, then to a departure lounge
+then to a boarding gate and finally to the plane where complimentary drinks are served
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Usage
+The behaviour is described in tests, 
+Users should be able to refactor the many switch statements 
+into Visitor Pattern and see the tests continue to pass
